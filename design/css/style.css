@@ -22,7 +22,7 @@
 
 body {
     font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
-    background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.4)), url(../images/cherry\ hill.webp);
+    background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.4)), url(../images/cherryhill.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
