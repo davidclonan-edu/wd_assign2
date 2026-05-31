@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website for finding restaurants, making reservations, and getting recommendations.">
+    <meta name="keywords" content="David, Clonan, restaurants, bookings, reservations, recommendations">
+    <meta name="author" content="David Clonan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../design/css/style.css">
+    <script src="../design/js/jquery.min.js"></script>
+    <script src="../design/js/script.js"></script>
+    <title>Recommendations</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <!-- <li>
+                <img src="../design/images/logo.png" alt="Logo">
+            </li> -->
+            <li>
+                <h1>Restaurant Finder</h1>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Restaurant Recommender</h2>
+            <form id="recommendform">
+                <label>Dietary Preferences:</label>
+                <input type="checkbox" id="dp_vegetarian" name="dp_dietarypreferences" value="vegetarian">
+                <label class="checkbox-label" for="dp_vegetarian">Vegetarian</label>
+                <input type="checkbox" id="dp_vegan" name="dp_dietarypreferences" value="vegan">
+                <label class="checkbox-label" for="dp_vegan">Vegan</label>
+                <input type="checkbox" id="dp_glutenfree" name="dp_dietarypreferences" value="glutenfree">
+                <label class="checkbox-label" for="dp_glutenfree">Gluten Free</label>
+                <input type="checkbox" id="dp_lactosefree" name="dp_dietarypreferences" value="lactosefree">
+                <label class="checkbox-label" for="dp_lactosefree">Lactose Free</label>
+                <input type="checkbox" id="dp_halal" name="dp_dietarypreferences" value="halal">
+                <label class="checkbox-label" for="dp_halal">Halal</label>
+                <br>
+                <label for="minprice">Minimum Price:</label>
+                <input type="range" min="0" max="100" value="0" id="minprice" name="minprice">
+                <span id="minpricevalue">0</span>
+                <label for="maxprice">Maximum Price:</label>
+                <input type="range" min="0" max="100" value="100" id="maxprice" name="maxprice">
+                <span id="maxpricevalue">100</span>
+                <br>
+                <label>Dining Styles:</label>
+                <input type="radio" id="ds_family" name="ds_diningstyle" value="family" required>
+                <label class="checkbox-label" for="ds_family">Family</label>
+                <input type="radio" id="ds_date" name="ds_diningstyle" value="date" required>
+                <label class="checkbox-label" for="ds_date">Date</label>
+                <input type="radio" id="ds_casual" name="ds_diningstyle" value="casual" required>
+                <label class="checkbox-label" for="ds_casual">Casual</label>
+                <input type="radio" id="ds_takeaway" name="ds_diningstyle" value="takeaway" required>
+                <label class="checkbox-label" for="ds_takeaway">Takeaway</label>
+                <input type="radio" id="ds_quick" name="ds_diningstyle" value="quick" required>
+                <label class="checkbox-label" for="ds_quick">Quick</label>
+                <br>
+                <br> <!-- Extra line break for spacing before the buttons :p -->
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Recommendations</h2>
+            <div id="recommendations">
+                <p>Submit the form above to get restaurant recommendations based on your preferences!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>&copy; 2026 David Clonan - 105915439</h3>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website for finding restaurants, making reservations, and getting recommendations.">
+    <meta name="keywords" content="David, Clonan, restaurants, bookings, reservations, recommendations">
+    <meta name="author" content="David Clonan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../design/css/style.css">
+    <script src="../design/js/jquery.min.js"></script>
+    <script src="../design/js/script.js"></script>
+    <title>Reservations</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <!-- <li>
+                <img src="../design/images/logo.png" alt="Logo">
+            </li> -->
+            <li>
+                <h1>Restaurant Finder</h1>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Reserve a Restaurant</h2>
+            <form id="reservationform" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" id="phonenumber" name="phonenumber">
+                <br>
+                <label for="selectedrestaurant">Selected Restaurant</label>
+                <select id="selectedrestaurant" name="selectedrestaurant" required>
+                    <option value="" disabled selected>-- Please select --</option>
+                    <option value="cherryhill">Cherry Hill Tavern</option>
+                    <option value="bocca">Bocca</option>
+                    <option value="pancakeparlour">Pancake Parlour</option>
+                    <option value="sushihub">Sushi Hub</option>
+                    <option value="mcdonalds">McDonald's</option>
+                    <option value="kfc">KFC</option>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <label for="reservationdate">Reservation Date</label>
+                <input type="date" id="reservationdate" name="reservationdate" required>
+                <br>
+                <label for="reservationtime">Reservation Time</label>
+                <input type="time" id="reservationtime" name="reservationtime" required>
+                <br>
+                <label for="numberofpeople">Number of People</label>
+                <input type="number" id="numberofpeople" name="numberofpeople" min="1" required>
+                <br>
+                <label for="specialrequests">Special Requests</label>
+                <textarea id="specialrequests" name="specialrequests" rows="4"></textarea>
+                <br>
+                <label for="depositamount">Deposit Amount ($)</label>
+                <input type="number" id="depositamount" name="depositamount" disabled>
+                <br>
+                <label for="depositmethod">Deposit Method</label>
+                <select id="depositmethod" name="depositmethod" required>
+                    <option value="" disabled selected>-- Please select --</option>
+                    <option value="voucher">Voucher</option>
+                    <option value="online">Online Payment</option>
+                </select>
+                <br>
+                <label for="cardnumber" class="carddetails">Card Number</label>
+                <input type="text" id="cardnumber" class="carddetailsinput" name="cardnumber" minlength="15" maxlength="16" required>
+                <br class="carddetails">
+                <label for="cardexpiry" class="carddetails">Card Expiry</label>
+                <input type="month" id="cardexpiry" class="carddetailsinput" name="cardexpiry" required>
+                <br class="carddetails">
+                <label for="cardcvv" class="carddetails">Card CVV</label>
+                <input type="text" id="cardcvv" class="carddetailsinput" name="cardcvv" required>
+                <br class="carddetails">
+                <label for="billingemail">Billing Email</label>
+                <input type="email" id="billingemail" name="billingemail" required>
+                <input type="checkbox" id="sameasemail" name="sameasemail">
+                <label for="sameasemail">Same as Email</label>
+                <br>
+                <br> <!-- Extra line break for spacing before the buttons :p -->
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>&copy; 2026 David Clonan - 105915439</h3>
+    </footer>
+</body>
+</html>
